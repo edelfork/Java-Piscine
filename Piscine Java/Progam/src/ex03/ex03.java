@@ -14,11 +14,8 @@ public class ex03 {
         int control = 0;
         int numb;
         Scanner scan = new Scanner(System.in);
-        scan.useDelimiter("\n");
-        String s = scan.next();
-        Scanner scan2 = new Scanner(s);
-        while (i++ < 6 && scan2.hasNextInt()) {
-            numb = scan2.nextInt();
+        while (i++ < 5) {
+            numb = scan.nextInt();
             if (!(numb >= 1 && numb <= 9)) {
                 errorHandler();
             }
@@ -26,8 +23,6 @@ public class ex03 {
                 ret = numb;
             control = control * 10 + numb;
         }
-        if (control < 11111 || control > 99999)
-            errorHandler();
         return ret;
     }
 

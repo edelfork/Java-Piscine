@@ -39,18 +39,12 @@ public class ex02 {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-
-        try {
-            int n = scan.nextInt();
-            while (n != 42) {
-                if (isPrime(sumOfDigits((n))))
-                    prime++;
-                n = scan.nextInt();
-            }
-            System.out.println("Count of coffee-request - " + prime);
-        } catch (Exception e) {
-            System.err.println("IllegalArgument");
-            System.exit(-1);
+        int n = scan.nextInt();
+        while (n != 42) {
+            if (isPrime(sumOfDigits((n))))
+                prime++;
+            n = scan.nextInt();
         }
+        System.out.println("Count of coffee-request - " + prime);
     }
 }

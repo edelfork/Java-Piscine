@@ -24,17 +24,12 @@ public class ex01 {
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
 
-        try {
-            int n = scan.nextInt();
-            if (n <= 1) {
-                System.err.println("IllegalArgument");
-                System.exit(-1);
-            } else
-                System.out.println(isPrime(n) + " " + turn);
-        } catch (Exception e) {
+        int n = scan.nextInt();
+        if (n <= 1) {
             System.err.println("IllegalArgument");
             System.exit(-1);
-        }
+        } else
+            System.out.println(isPrime(n) + " " + turn);
     }
 
 }

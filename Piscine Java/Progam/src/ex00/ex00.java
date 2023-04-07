@@ -17,7 +17,6 @@ public class ex00 {
         ret += n % 10;
             n = n / 10;
         ret += n % 10;
-            n = n / 10;
 
         return ret;
     }
