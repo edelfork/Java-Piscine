@@ -1,8 +1,6 @@
-package ex03;
-
 import java.util.Scanner;
 
-public class ex03 {
+public class Program {
 
     public static void errorHandler() {
         System.err.println("IllegalArgument");

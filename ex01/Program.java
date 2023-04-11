@@ -1,13 +1,13 @@
-package ex01;
-
 import java.util.Scanner;
 
-public class ex01 {
+public class Program {
 
     public static int turn;
 
     public static boolean isPrime(int n){
         turn++;
+         if (n <= 2)
+            return true;
         if (n % 2 == 0){
             return false;
         }
@@ -31,5 +31,4 @@ public class ex01 {
         } else
             System.out.println(isPrime(n) + " " + turn);
     }
-
 }

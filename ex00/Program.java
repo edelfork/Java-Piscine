@@ -1,6 +1,4 @@
-package ex00;
-
-public class ex00 {
+public class Program {
 
     public static int sumOfDigits(int n) {
         int ret;

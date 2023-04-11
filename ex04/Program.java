@@ -1,8 +1,6 @@
-package ex04;
-
 import java.util.Scanner;
 
-public class ex04 {
+public class Program {
 
     public static boolean isStored(char[] store, char c) {
         for (int i = 0; i < store.length; i++)
@@ -76,13 +74,14 @@ public class ex04 {
     
     public static void printer(char[] store, int[] count, float ratio) {
     	float max = findMax(count);
-    	int[] many = new int[12];
-    	int[] numb = new int[12];
-    	char[] ordered = new char[11];
+		int len = store.length + 1;
+    	int[] many = new int[len];
+    	int[] numb = new int[len];
+    	char[] ordered = new char[len];
     	int i = 0;
     	int j = 0;
     	int k = 0;
-    	while (i < 10 && max > 0) {
+    	while (i < 11 && max > 0) {
     		while (j < count.length) {
 	    		if (count[j] == max) {
 	    			many[i]++;
@@ -107,7 +106,7 @@ public class ex04 {
     			j++;
     		}
     		postTag(count, numb, k);
-			while (numb[k] > 0 && numb[k] >= ratio * (10 - i)) {
+			while (k < 10 && numb[k] > 0 && numb[k] >= ratio * (10 - i)) {
 				System.out.print(numb[k]);
 				System.out.print(" ");
 				postTag(count, numb, k);
@@ -118,7 +117,7 @@ public class ex04 {
     	}
     	i = 0;
     	j = 1;
-    	while(i < 11) {
+    	while(i < 10) {
     		if(findMax(count) >= 100)
     			System.out.print("  ");
     		else if(findMax(count) >= 10)

@@ -1,12 +1,12 @@
-package ex02;
-
 import java.util.Scanner;
 
-public class ex02 {
+public class Program {
 
     public static int prime;
 
     public static boolean isPrime(int n){
+        if (n <= 2)
+            return true;
         if (n % 2 == 0){
             return false;
         }
