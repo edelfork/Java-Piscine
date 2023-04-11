@@ -71,6 +71,20 @@ public class Program {
 		if (findMax(count) >= 100 && numb[k] < 10)
 			System.out.print(" ");
     }
+
+	public static char[] lexOrding(char[] str, int[] many) {
+		char tmp;
+		for (int i = 0; i < str.length; i++) {
+			for (int j = 0; j < str.length; j++) {
+				if (many[i] == many[j] && str[i] < str[j]) {
+					tmp = str[i];
+					str[i] = str[j];
+					str[j] = tmp;
+				}
+			}
+		}
+		return (str);
+	}
     
     public static void printer(char[] store, int[] count, float ratio) {
     	float max = findMax(count);
@@ -117,7 +131,8 @@ public class Program {
     	}
     	i = 0;
     	j = 1;
-    	while(i < 10) {
+		ordered = lexOrding(ordered, numb);
+		while(i < 10 && ordered[i] != 0) {
     		if(findMax(count) >= 100)
     			System.out.print("  ");
     		else if(findMax(count) >= 10)
